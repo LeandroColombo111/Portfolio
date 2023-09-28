@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Para que la imagen "no se exceda de los limites de su contenedor (de su padre) */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .contenedor {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 20% 80% ;
+            grid-template-rows: 70px 1fr 50px;
+            grid-template-areas: 
+                "navegacion encabezado "
+                "navegacion  principal"
+                "navegacion  pie"
+            
+            ;
+        }
+
+        header {
+            grid-area: encabezado;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav {
+            grid-area: navegacion;
+            background: rgb(192, 192, 192);
+            padding: 5px;
+        }
+        nav img {
+            display: block;
+            margin: auto;
+            border-radius: 100px
+        }
+        nav ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+        nav ul li a {
+            background: rgb(61, 161, 237);
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-family: Arial;
+            padding: 5px;
+            margin-bottom: 5px;
+            color: white;
+        }
+        nav ul li a:hover {
+            background: rgb(21, 52, 130);
+        }
+        main {
+            grid-area: principal;
+        }
+        footer {
+            padding: 10px;
+            grid-area: pie;
+            display: flex;
+        }
+        footer p {
+            flex-basis: 50%;
+            margin-right: auto;
+        }
+        footer ul {
+            list-style: none;
+            display: flex;
+            gap: 5px;
+        }
+        footer ul a {
+            background: rgb(238, 254, 201);
+            display: block;
+            padding: 5px;
+        }
+
+        #info {
+            display: flex;
+        }
+        #info div {
+            flex-basis: 25%;
+        }
+
+        #galeria {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Mi página</h1>
+        </header>
+        <nav>
+            <img src="https://picsum.photos/50" alt="">  
+            <ul>
+                <li><a href="">enlace 1</a></li>
+                <li><a href="">enlace 2</a></li>
+                <li><a href="">enlace 3</a></li>
+                <li><a href="">enlace 4</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="info">
+                <div>col 1</div>
+                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. architecto.</div>
+                <div>col 3</div>
+                <div>col 4</div>  
+            </section>
+            <h2>Galeria de fotos</h2>
+            <section id="galeria">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500" alt="">
+                <img src="https://picsum.photos/500">
+            </section>
+        </main>
+        <footer>
+            <p>Todos los derechos reservados</p>
+            <ul id="redes">
+                <li><a href="">red 1</a></li>
+                <li><a href="">red 2</a></li>
+                <li><a href="">red 3</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

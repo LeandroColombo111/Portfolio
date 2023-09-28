@@ -1,0 +1,121 @@
+/* Estilos CSS para personalizar la página */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto gris oscuro */
+}
+
+header {
+    background-color: #ffd700; /* Amarillo */
+    color: #333; /* Texto gris oscuro */
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.brand-flyer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.brand-flyer img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas igualmente espaciadas */
+    gap: 20px; /* Espacio entre productos */
+}
+
+.product {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9; /* Fondo gris claro para productos */
+    border: 1px solid #ddd; /* Borde del producto */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+footer {
+    background-color: #666; /* Fondo gris topo */
+    color: #fff; /* Texto blanco */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en dispositivos móviles */
+    }
+    .product {
+        padding: 8px;
+    }
+}
+
+/* Estilos para dispositivos de pantalla pequeña (por ejemplo, smartphones) */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna en pantallas muy pequeñas */
+    }
+    .product {
+        padding: 5px;
+    }
+}
